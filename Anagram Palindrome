@@ -1,0 +1,23 @@
+
+bool ispal(string s){
+    int count[256]={0};
+        for(int i=0;s[i];i++){
+            count[s[i]]++;
+        }
+        int odd=0;
+        for(int i=0;i<256;i++){
+            if(count[i]&1){
+                odd++;
+            }
+        }
+        return (odd<=1);
+}
+int main() {
+    int t;cin>>t;
+    while(t--){
+        string s;cin>>s;
+        ispal(s)? cout<<"Yes\n":cout<<"No\n";
+    }
+	//code
+	return 0;
+}
