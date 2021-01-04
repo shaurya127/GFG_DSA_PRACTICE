@@ -1,0 +1,46 @@
+#include <algorithm>
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef unsigned long long ll;
+
+int main()
+{
+	int t,n;
+	cin >> t;
+	while(t--)
+	{
+		cin >> n;
+		int i,nn = 0,check = n , check1=n;
+		vector <int> vec;
+		bool flag1 = false , flag2 = true;
+		
+		while(n)
+		{	
+			nn = nn*10 + n%10;
+			n /= 10;
+		}	
+
+		while(check)
+		{
+			vec.push_back(check%2);
+			check /= 2;
+		}
+
+		if(nn == check1)	flag1=true;
+		for(i=0;i<vec.size()/2;i++)
+		{
+			if(vec[i] != vec[vec.size()-i-1])
+			{
+				flag2 = false;
+				break;
+			}
+		}
+
+		if(flag1 && flag2)
+			cout << "Yes\n";
+		else
+			cout << "No\n";
+
+	}
+}
