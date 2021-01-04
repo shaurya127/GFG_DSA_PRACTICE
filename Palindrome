@@ -1,0 +1,76 @@
+    int m=0;
+    while(n){
+        m = m*10 + n%10;
+        n/=10;
+    }//Initial Template for C++
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+ // } Driver Code Ends
+
+
+//User function Template for C++
+
+class Solution
+{
+	public:
+	
+	int ispal(int m){
+	    int rev=0;
+		    while(m!=0){
+		        int num=m%10;
+		        rev=(rev*10)+num;
+		        m=m/10;
+		    }
+		 return rev;
+	}
+	
+		string is_palindrome(int n)
+		{
+		    int x=ispal(n);
+		    if(n==x){
+		        return "Yes";
+		    }
+		    else{
+		        return "No";
+		    }
+		    
+		}
+};
+
+// { Driver Code Starts.
+int main(){
+    int T;
+    cin >> T;
+    while(T--)
+    {
+    	int n;
+    	cin >> n;
+    	Solution ob;
+    	string ans = ob.is_palindrome(n);
+    	cout << ans <<"\n";
+    }
+	return 0;
+}
+  // } Driver Code Ends
+    return m;
+}
+int main() {
+	//code
+	int t;
+	cin>>t;
+	while(t--){
+	    int n;
+	    cin>>n;
+	    int m;
+	    m=reverse(n);
+	    if(m==n){
+	        cout<<"Yes"<<endl;
+	    }else{
+	        cout<<"No"<<endl;
+	    }
+	}
+	return 0;
+}
